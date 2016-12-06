@@ -10,8 +10,8 @@ private class RebuildingHardRef[+A](private val builder: () => A, value: A) exte
   override def map[B](f: A => B) = new RebuildingHardRef(() => f(builder()), f(value))
   override def flatMap[B](f: A => Ref[B, HARD]) = f(value)
 
-  override def toSoft = Ref.soft(builder, value)
-  override def toWeak = Ref.weak(builder, value)
+  override def toSoft = Ref.soft(value, builder)
+  override def toWeak = Ref.weak(value, builder)
 
   override def stripped(update: Boolean) = Ref.hard(value)
 }

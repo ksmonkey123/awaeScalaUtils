@@ -51,7 +51,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Factory object for creating <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a> instances
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -261,24 +262,30 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="hard[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]"></a>
-      <a id="hard[A](()⇒A,A):Ref[A,HARD]"></a>
+    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hard[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]"></a>
+      <a id="hard[A](A,()⇒A):Ref[A,HARD]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hard</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span></span>, <span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span>, <a href="RefType$$HARD.html" class="extype" name="ch.awae.scala.util.ref.RefType.HARD">HARD</a>]</span>
+        <span class="name">hard</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span></span>, <span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.hard.A">A</span>, <a href="RefType$$HARD.html" class="extype" name="ch.awae.scala.util.ref.RefType.HARD">HARD</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@hard[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@hard[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering hard reference for a given value and supplier
+function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering hard reference for a given value and supplier
+function.</p><p>The supplier function should return the same value as the one provided, this
+is however not checked since the function is not evaluated.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the value</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering hard reference holding the value <code>value</code>
+and the recovery function <code>f</code></p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>consider using <a href="#hard[A](f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]" class="extmbr" name="ch.awae.scala.util.ref.Ref#hard">hard[A](f: () =&gt; A)</a> instead to
+calculate the value from the function directly</p></span></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hard[A](f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]"></a>
       <a id="hard[A](()⇒A):Ref[A,HARD]"></a>
       <h4 class="signature">
@@ -294,8 +301,12 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering hard reference for a given supplier function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering hard reference for a given supplier function.</p><p>The function is evaluated and the return value is referenced. The
+reference also contains the function itself for recovery if it is
+ever converted into a soft or weak reference.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering hard reference holding the function <code>f</code>
+and its return value</p></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#hard" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hard[A](value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.HARD]"></a>
       <a id="hard[A](A):Ref[A,HARD]"></a>
       <h4 class="signature">
@@ -311,7 +322,9 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">creates a hard reference for a given value
+</p><div class="fullcomment"><div class="comment cmt"><p>creates a hard reference for a given value
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the object to create the reference for</p></dd><dt>returns</dt><dd class="cmt"><p>a hard reference for the given <code>value</code></p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -397,24 +410,30 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="soft[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]"></a>
-      <a id="soft[A](()⇒A,A):Ref[A,SOFT]"></a>
+    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="soft[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]"></a>
+      <a id="soft[A](A,()⇒A):Ref[A,SOFT]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">soft</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span></span>, <span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span>, <a href="RefType$$SOFT.html" class="extype" name="ch.awae.scala.util.ref.RefType.SOFT">SOFT</a>]</span>
+        <span class="name">soft</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span></span>, <span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.soft.A">A</span>, <a href="RefType$$SOFT.html" class="extype" name="ch.awae.scala.util.ref.RefType.SOFT">SOFT</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@soft[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@soft[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering soft reference for a given value and supplier
+function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering soft reference for a given value and supplier
+function.</p><p>The supplier function should return the same value as the one provided, this
+is however not checked since the function is not evaluated.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the value</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering soft reference holding the value <code>value</code>
+and the recovery function <code>f</code></p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>consider using <a href="#soft[A](f:()=&gt;A,force:Boolean):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]" class="extmbr" name="ch.awae.scala.util.ref.Ref#soft">soft[A](f: () =&gt; A, force:Boolean)</a> instead to
+calculate the value from the function directly: </p><pre>Ref.soft(f, <span class="kw">true</span>)</pre></span></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="soft[A](f:()=&gt;A,force:Boolean):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]"></a>
       <a id="soft[A](()⇒A,Boolean):Ref[A,SOFT]"></a>
       <h4 class="signature">
@@ -430,8 +449,17 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering soft reference for a given supplier function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering soft reference for a given supplier function.</p><p>If the parameter <code>force</code> is <code>true</code> the function is evaluated and the
+return value is referenced. The reference also contains the function
+itself for recovery. If <code>force</code> is <code>false</code> an empty reference just holding
+the recovery function is created
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt class="param">force</dt><dd class="cmt"><p>indicates whether or not the function should be evaluated when
+creating the reference. By default this is <code>false</code></p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering soft reference holding the function <code>f</code>
+and optionally its return value</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>in most cases it is not necessary to evaluate the function when creating
+the reference as the value will automatically be created when it is first requested.
+In some cases where i.e. the generation is expensive forcing initialisation may
+provide some performance benefits.</p></span></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#soft" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="soft[A](value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.SOFT]"></a>
       <a id="soft[A](A):Ref[A,SOFT]"></a>
       <h4 class="signature">
@@ -447,7 +475,9 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">creates a soft reference for a given value
+</p><div class="fullcomment"><div class="comment cmt"><p>creates a soft reference for a given value
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the object to create the reference for</p></dd><dt>returns</dt><dd class="cmt"><p>a soft reference for the given <code>value</code></p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -551,24 +581,30 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="weak[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]"></a>
-      <a id="weak[A](()⇒A,A):Ref[A,WEAK]"></a>
+    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="weak[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]"></a>
+      <a id="weak[A](A,()⇒A):Ref[A,WEAK]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">weak</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span></span>, <span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span>, <a href="RefType$$WEAK.html" class="extype" name="ch.awae.scala.util.ref.RefType.WEAK">WEAK</a>]</span>
+        <span class="name">weak</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span></span>, <span name="f">f: () ⇒ <span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span></span>)</span><span class="result">: <a href="Ref.html" class="extype" name="ch.awae.scala.util.ref.Ref">Ref</a>[<span class="extype" name="ch.awae.scala.util.ref.Ref.weak.A">A</span>, <a href="RefType$$WEAK.html" class="extype" name="ch.awae.scala.util.ref.RefType.WEAK">WEAK</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@weak[A](f:()=&gt;A,value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#ch.awae.scala.util.ref.Ref$@weak[A](value:A,f:()=&gt;A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering soft reference for a given value and supplier
+function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering soft reference for a given value and supplier
+function.</p><p>The supplier function should return the same value as the one provided, this
+is however not checked since the function is not evaluated.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the value</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering soft reference holding the value <code>value</code>
+and the recovery function <code>f</code></p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>consider using <a href="#weak[A](f:()=&gt;A,force:Boolean):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]" class="extmbr" name="ch.awae.scala.util.ref.Ref#weak">weak[A](f: () =&gt; A, force:Boolean)</a> instead to
+calculate the value from the function directly: </p><pre>Ref.weak(f, <span class="kw">true</span>)</pre></span></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="weak[A](f:()=&gt;A,force:Boolean):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]"></a>
       <a id="weak[A](()⇒A,Boolean):Ref[A,WEAK]"></a>
       <h4 class="signature">
@@ -584,8 +620,17 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">creates an auto-recovering weak reference for a given supplier function.</p><div class="fullcomment"><div class="comment cmt"><p>creates an auto-recovering weak reference for a given supplier function.</p><p>If the parameter <code>force</code> is <code>true</code> the function is evaluated and the
+return value is referenced. The reference also contains the function
+itself for recovery. If <code>force</code> is <code>false</code> an empty reference just holding
+the recovery function is created
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">f</dt><dd class="cmt"><p>the supplier function</p></dd><dt class="param">force</dt><dd class="cmt"><p>indicates whether or not the function should be evaluated when
+creating the reference. By default this is <code>false</code></p></dd><dt>returns</dt><dd class="cmt"><p>an auto-recovering weak reference holding the function <code>f</code>
+and optionally its return value</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>in most cases it is not necessary to evaluate the function when creating
+the reference as the value will automatically be created when it is first requested.
+In some cases where i.e. the generation is expensive forcing initialisation may
+provide some performance benefits.</p></span></dd></dl></div>
+    </li><li name="ch.awae.scala.util.ref.Ref#weak" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="weak[A](value:A):ch.awae.scala.util.ref.Ref[A,ch.awae.scala.util.ref.RefType.WEAK]"></a>
       <a id="weak[A](A):Ref[A,WEAK]"></a>
       <h4 class="signature">
@@ -601,7 +646,9 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">creates a weak reference for a given value
+</p><div class="fullcomment"><div class="comment cmt"><p>creates a weak reference for a given value
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the referenced object</p></dd><dt class="param">value</dt><dd class="cmt"><p>the object to create the reference for</p></dd><dt>returns</dt><dd class="cmt"><p>a weak reference for the given <code>value</code></p></dd></dl></div>
     </li></ol>
             </div>
 

@@ -48,10 +48,10 @@ private class RebuildingWeakRef[+A] private (private val builder: () => A, priva
   def flatMap[B](f: A => Ref[B, WEAK]) = f(get)
 
   // CONVERSION FUNCTION
-  def toHard = Ref.hard(builder, get)
+  def toHard = Ref.hard(get, builder)
   def toSoft = ref.get match {
     case null => Ref.soft(builder, false)
-    case x => Ref.soft(builder, x)
+    case x => Ref.soft(x, builder)
   }
   def toWeak = this
 
